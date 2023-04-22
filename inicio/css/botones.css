@@ -1,0 +1,281 @@
+main {
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+main:before {
+    background-image: url(../../general/includes/imagenes/fondo.jpg);
+}
+
+.contenedor {
+    z-index: 2;
+}
+
+.boton {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.boton a {
+    padding: 20px 30px;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.boton .mascara {
+    height: 100px;
+    position: absolute;
+    transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+    transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 200px;
+}
+
+.boton .decoracion {
+    display: inline-block;
+    transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media all and (max-width:767px) {
+    body {
+        height: 100vh;
+    }
+
+    main {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .boton {
+        border-radius: 30px;
+        margin: 20px 0 20px;
+        width: 75%;
+        border: 4px solid var(--oscuro1);
+        background-color: var(--acento2);
+        font-size: 18px;
+    }
+
+    .boton a {
+        color: var(--uno);
+    }
+
+    .boton .mascara {
+        background-color: var(--uno);
+    }
+
+    .boton:hover {
+        background-color: var(--oscuro2);
+        border-color: var(--oscuro2);
+        box-shadow: 0 0 15px var(--uno);
+    }
+
+    .boton:hover a {
+        color: var(--dos);
+    }
+
+    .boton:hover .mascara {
+        background-color: var(--uno);
+        transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
+    }
+
+    .boton:hover .decoracion {
+        transform: translateX(5px);
+    }
+
+    .boton:active {
+        background-color: var(--uno);
+    }
+
+    .boton:active a {
+        color: var(--oscuro3);
+    }
+
+    header {
+        position: absolute;
+        top: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1105px) {
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .boton {
+        border-radius: 50px;
+        margin: 20px 0 20px;
+        width: 50%;
+        border: 4px solid var(--oscuro1);
+        background-color: var(--acento2);
+        font-size: 25px;
+    }
+    
+    .boton a {
+        padding: 30px 0 35px;
+        color: var(--uno);
+    }
+
+    .boton .mascara {
+        background-color: var(--uno);
+    }
+
+    .boton:hover {
+        background-color: var(--oscuro2);
+        border-color: var(--oscuro2);
+        box-shadow: 0 0 15px var(--uno);
+    }
+
+    .boton:hover a {
+        color: var(--dos);
+    }
+
+    .boton:hover .mascara {
+        background-color: var(--uno);
+        transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
+    }
+
+    .boton:hover .decoracion {
+        transform: translateX(5px);
+    }
+
+    .boton:active {
+        background-color: var(--uno);
+    }
+
+    .boton:active a {
+        color: var(--oscuro3);
+    }
+}
+
+@media (min-width: 1106px) and (max-width: 1326px) {
+    .boton {
+        border-radius: 10px;
+        margin: 0 10px 0;
+        width: 30%;
+        border: 4px solid var(--oscuro1);
+        background-color: var(--acento2);
+        display: inline-block;
+    }
+
+    .boton a {
+        font-size: 25px;
+        color: var(--uno);
+        font-weight: bold;
+    }
+
+    .boton .mascara {
+        background-color: var(--uno);
+    }
+
+    .boton:hover {
+        background-color: var(--oscuro2);
+        border-color: var(--oscuro2);
+        box-shadow: 0 0 25px var(--uno);
+    }
+
+    .boton:hover a {
+        color: var(--dos);
+    }
+
+    .boton:hover .mascara {
+        background-color: var(--uno);
+        transform: translate3d(180%, -100px, 0) rotate3d(0, 1, 1, 90deg);
+    }
+
+    .mascara a {
+        content: ' ';
+        width: 100%;
+        width: 200px;
+        height: 100px;
+    }
+
+    .boton:hover .decoracion {
+        transform: translateX(5px);
+    }
+
+    .boton:active {
+        background-color: var(--uno);
+    }
+
+    .boton:active a {
+        color: var(--oscuro3);
+    }
+}
+
+@media all and (min-width:1327px) {
+    .boton {
+        border-radius: 10px;
+        margin: 0 10px 0;
+        width: 25%;
+        border: 4px solid var(--oscuro1);
+        background-color: var(--acento2);
+        display: inline-block;
+    }
+
+    .boton a {
+        color: var(--uno);
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .boton .mascara {
+        background-color: var(--uno);
+    }
+
+    .boton:hover {
+        background-color: var(--oscuro2);
+        border-color: var(--oscuro2);
+        box-shadow: 0 0 25px var(--uno);
+    }
+
+    .boton:hover a {
+        color: var(--dos);
+    }
+
+    .boton:hover .mascara {
+        background-color: var(--uno);
+        transform: translate3d(180%, -100px, 0) rotate3d(0, 1, 1, 90deg);
+    }
+
+    .mascara a {
+        content: ' ';
+        width: 100%;
+        width: 200px;
+        height: 100px;
+    }
+
+    .boton:hover .decoracion {
+        transform: translateX(5px);
+    }
+
+    .boton:active {
+        background-color: var(--uno);
+    }
+    
+    .boton:active a {
+        color: var(--oscuro3);
+    }
+}

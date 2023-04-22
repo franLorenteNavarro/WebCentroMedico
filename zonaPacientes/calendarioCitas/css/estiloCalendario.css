@@ -1,0 +1,313 @@
+main:before {
+    background-image: url(../../general/includes/imagenes/fondoCitas.webp);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+@media all and (max-width:767px) {
+    .contenedorCalendario, .contenedorForm {
+        z-index: 2;
+        background: var(--uno);
+        padding: 15px;
+        width: 90%;
+        top: 12%;
+        left: 5%;
+        color: var(--oscuro3);
+        font-weight: bold;
+        margin-top: 3.5%;
+        margin-bottom: 3.5%;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+        position: absolute;
+        border-radius: 2%;
+    }
+    .contenedorCalendario {
+        z-index: 3;
+    }
+    .fondoTransparente {
+        z-index: 4;
+    }
+    .contenedorMenu {
+        z-index: 5;
+    }
+    .contenedorMostrarForm, .contenedorAtras {
+        position: absolute;
+        width: 10%;
+        height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .contenedorMostrarForm img, .contenedorAtras img {
+        width: 100%;
+    }
+    .contenedorMostrarForm {
+        top: 0;
+        right: 0;
+    }
+    .contenedorAtras {
+        bottom: 0;
+        right: 0;
+    }
+    .contenedorCalendario td {
+        background: #ffff;
+    }
+    form {
+        width: 100%;
+        text-align: left;
+    }
+    .cita {
+        display: inline-block;
+        text-align: center;
+        width: 46%;
+        margin: 2%;
+    }
+    .contenedorBoton {
+        text-align: center;
+        margin-top: auto;
+    }
+    input[type=radio] {
+        display: none;
+    }
+    .cita label {
+        display: inline-block;
+        width: 100%;
+        padding: 3% 0 3% 0;
+        box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
+        border-radius: 5%;
+        cursor: pointer;
+        background-color: #ffff;
+        color: var(--acento3);
+    }
+    .ocupado label {
+        cursor: not-allowed;
+        background-color: #ffccbc;
+        color: black;
+        font-style: italic;
+    }
+    .ocupado label:hover {
+        background-color: var(--danger);
+    }
+    .cita .tRadSeleccionado {
+        background-color: var(--success);
+        color: var(--uno);
+    }
+    .tablacalendario {
+        width: 100%;
+    }
+    .tablacalendario td, .tablacalendario th {
+        padding: 5px;
+        border: 1px solid var(--uno);
+        text-align: center;
+    }
+    .tablacalendario th {
+        color: var(--oscuro3);
+        font-size: 1.3rem;
+    }
+    .tablacalendario td {
+        color: var(--acento3);
+    }
+    .FechaSeleccionada {
+        cursor: pointer;
+    }
+    .FechaSeleccionada.tDiaSeleccionado {
+        background-color: var(--dos);
+    }
+    /* sabado y domingos*/
+    .FechaSeleccionada:nth-child(6), .FechaSeleccionada:nth-child(7) {
+        color: var(--danger);
+        font-style: italic;
+        font-weight: normal;
+        cursor: not-allowed;
+    }
+    .FechaSeleccionada.diaPasado {
+        font-style: italic;
+        font-weight: normal;
+        background-color: #ffccbc;
+        color: black;
+        cursor: not-allowed;
+    }
+    .FechaSeleccionada.tDiaSeleccionado span {
+        color: var(--oscuro3);
+        border-bottom: 2px solid currentColor;
+    }
+    .FechaSeleccionada.dSeleccionado {
+        font-weight: bold;
+        background-color: var(--success);
+    }
+    .FechaSeleccionada.dSeleccionado span {
+        color: var(--uno);
+    }
+    #mesYAño, #mesYAño2 {
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        background-color: var(--uno);
+    }
+}
+
+@media all and (min-width:768px) {
+    main {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+    .contenedorCalendario, .contenedorForm {
+        z-index: 2;
+        background: var(--uno);
+        padding: 15px;
+        width: 25%;
+        color: var(--oscuro3);
+        font-weight: bold;
+        margin-top: 1%;
+        margin-bottom: 2%;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+        border-radius: 2%;
+        height: 85%;
+    }
+    .contenedorMostrarForm, .contenedorAtras {
+        display: none;
+    }
+    .contenedorCalendario {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedorForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contenedorCalendario td {
+        background: #ffff;
+    }
+    .contenedorCalendario {
+        margin-right: 1%;
+    }
+    .contenedorForm {
+        margin-left: 1%;
+    }
+    form {
+        width: 100%;
+        text-align: left;
+    }
+    .cita {
+        display: inline-block;
+        text-align: center;
+        width: 46%;
+        margin: 2%;
+    }
+    .contenedorBoton {
+        text-align: center;
+        margin-top: auto;
+    }
+    input[type=radio] {
+        display: none;
+    }
+    .cita label {
+        display: inline-block;
+        width: 100%;
+        padding: 3% 0 3% 0;
+        box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
+        border-radius: 5%;
+        cursor: pointer;
+        background-color: #ffff;
+        color: var(--acento3);
+    }
+    .cita label:hover {
+        color: var(--oscuro3);
+        background-color: var(--dos);
+        box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.4);
+    }
+    .ocupado label {
+        cursor: not-allowed;
+        background-color: #ffccbc;
+        color: black;
+        font-style: italic;
+    }
+    .ocupado label:hover {
+        background-color: var(--danger);
+    }
+    .cita .tRadSeleccionado {
+        background-color: var(--success);
+        color: var(--uno);
+    }
+    .tablacalendario {
+        width: 100%;
+    }
+    .tablacalendario td, .tablacalendario th {
+        padding: 5px;
+        border: 1px solid var(--uno);
+        text-align: center;
+    }
+    .tablacalendario th {
+        color: var(--oscuro3);
+        font-size: 1.3rem;
+    }
+    .tablacalendario td {
+        color: var(--acento3);
+    }
+    .FechaSeleccionada {
+        cursor: pointer;
+    }
+    .FechaSeleccionada.tDiaSeleccionado {
+        background-color: var(--dos);
+    }
+    /* sabado y domingos*/
+    .FechaSeleccionada:nth-child(6), .FechaSeleccionada:nth-child(7) {
+        color: var(--danger);
+        font-style: italic;
+        font-weight: normal;
+        cursor: not-allowed;
+    }
+    .FechaSeleccionada.diaPasado {
+        font-style: italic;
+        font-weight: normal;
+        background-color: #ffccbc;
+        color: black;
+        cursor: not-allowed;
+    }
+    .FechaSeleccionada.tDiaSeleccionado span {
+        color: var(--oscuro3);
+        border-bottom: 2px solid currentColor;
+    }
+    .FechaSeleccionada.dSeleccionado {
+        font-weight: bold;
+        background-color: var(--success);
+    }
+    .FechaSeleccionada.dSeleccionado span {
+        color: var(--uno);
+    }
+    #mesYAño, #mesYAño2 {
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        background-color: var(--uno);
+    }
+}
+
+@media (min-width: 1106px) and (max-width: 1326px) {
+    .contenedorCalendario, .contenedorForm {
+        width: 30%;
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 95%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1105px) {
+    .contenedorCalendario, .contenedorForm {
+        width: 45%;
+        height: 70%;
+    }
+    .cita label:hover {
+        background-color: var(--success);
+        color: var(--uno);
+    }
+}

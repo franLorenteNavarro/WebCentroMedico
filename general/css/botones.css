@@ -1,0 +1,95 @@
+.enlace {
+    text-decoration: none;
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-drag: none;
+}
+
+.estilo-boton {
+    -webkit-user-drag: none;
+}
+
+@media all and (max-width:767px) {
+    .enlace {
+        border: 0;
+        color: var(--oscuro2);
+        font-weight: bold;
+    }
+
+    .enlace:hover {
+        color: var(--dos);
+    }
+}
+
+@media all and (min-width:768px) {
+    .enlace {
+        padding: 10px 15px;
+        border: 1px solid var(--dos);
+        border-radius: 5px;
+        background-color: var(--dos);
+        color: var(--oscuro3);
+        box-shadow: 1px 1px 1px #000;
+        display: inline-block;
+    }
+
+    .enlace:hover {
+        color: var(--oscuro1);
+    }
+    
+    .boton {
+        border: 1px solid var(--dos);
+        background-color: var(--dos);
+        color: var(--oscuro3);
+    }
+}
+
+.estilo-boton {
+    min-width: 100px;
+    font-weight: bold;
+    color: var(--uno);
+    border: 0 none;
+    text-decoration: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px 10px;
+    margin: 10px 5px;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4);
+}
+
+.boton-secundario {
+    background: var(--acento2);
+}
+
+.boton-principal {
+    background: var(--oscuro2);
+    text-transform: uppercase;
+}
+
+.boton-eliminar {
+    background: var(--danger);
+    text-transform: uppercase;
+}
+
+.boton-warning {
+    background: var(--warning);
+    text-transform: uppercase;
+}
+
+.boton-info {
+    background: var(--info);
+    text-transform: uppercase;
+}
+
+.estilo-boton:hover, .estilo-boton:focus {
+    box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.4);
+}
+
+@media all and (max-width:767px) {
+    .estilo-boton {
+        padding: 15px 10px;
+        font-size: 0.75rem;
+    }
+}

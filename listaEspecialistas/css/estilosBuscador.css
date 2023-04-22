@@ -1,0 +1,184 @@
+header, footer, main .contenedorInicio, main .contenedorBuscador {
+    z-index: 2;
+}
+
+main {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+main:before {
+    background-image: url(../../general/includes/imagenes/fondo.jpg);
+}
+
+.contenedorInicio {
+    text-align: left;
+    width: 15%;
+}
+
+#buscador {
+    display: block;
+    height: 32px;
+    padding: 5px 32px;
+    font-size: 14px;
+    background-image: url(../includes/iconos/lupa.png);
+    background-size: 29px;
+    background-repeat: no-repeat;
+    background-position: 5px;
+    background-color: var(--uno);
+    color: var(--oscuro1);
+    font-weight: bold;
+    size: 1rem;
+    outline: 0px;
+    border: 3px solid var(--oscuro2);
+    border-radius: 5px;
+}
+
+.medico {
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    background: var(--uno);
+}
+
+div img {
+    display: block;
+    height: auto;
+}
+
+@media all and (max-width:767px) {
+    main {
+        flex-direction: column;
+    }
+    .contenedorInicio {
+        width: 100%;
+        padding-top: 10px;
+        padding-left: 10px;
+        text-align: left;
+    }
+    .contenedorBuscador {
+        width: 100%;
+    }
+    #buscador {
+        width: 70%;
+        margin-left: 28%;
+        margin-top: 3%;
+    }
+    .medico {
+        border-bottom: var(--oscuro3) 2px solid;
+    }
+    .medico:hover {
+        background-color: var(--acento1);
+    }
+    .medico label {
+        display: block;
+        color: var(--oscuro3);
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .infoMedico {
+        margin-left: 1.5%;
+        margin-top: 1.5%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    div img {
+        width: 80px;
+    }
+    #listaPrincipal, .resultado {
+        position: absolute;
+        left: 2%;
+        right: 2%;
+        max-height: 70%;
+        margin-top: 5%;
+        overflow-y: scroll;
+        box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+    }
+    hr {
+        border: solid 0.5px black;
+    }
+}
+
+@media all and (min-width:768px) {
+    main {
+        flex-direction: column;
+    }
+    .contenedorInicio {
+        width: 100%;
+        text-align: left;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .contenedorBuscador {
+        width: 94%;
+    }
+    #buscador {
+        width: 25%;
+        margin-left: 75%;
+    }
+    .medico:hover {
+        background-color: var(--acento1);
+    }
+    .medico label {
+        display: block;
+        color: var(--oscuro3);
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .infoMedico {
+        margin-left: 1.5%;
+        margin-top: 1.5%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    div img {
+        width: 100px;
+    }
+    #listaPrincipal, .resultado {
+        position: absolute;
+        left: 25%;
+        right: 25%;
+        max-height: 65%;
+        margin-top: 2%;
+        overflow-y: scroll;
+    }
+    hr {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1105px) {
+    main {
+        display: flex;
+    }
+    #listaPrincipal, .resultado {
+        margin-top: 6%;
+        left: 15%;
+        right: 15%;
+        max-height: 70%;
+    }
+    #buscador {
+        width: 35%;
+        margin-left: 65%;
+    }
+}
+
+@media (min-width: 1106px) and (max-width: 1326px) {
+    main {
+        display: flex;
+    }
+    #listaPrincipal, .resultado {
+        margin-top: 4%;
+        left: 15%;
+        right: 15%;
+        max-height: 60%;
+    }
+    #buscador {
+        width: 35%;
+        margin-left: 65%;
+    }
+}

@@ -1,0 +1,183 @@
+main:before {
+    background-image: url(../../general/includes/imagenes/fondoCitas.webp);
+}
+
+form, div {
+    z-index: 2;
+}
+
+fieldset {
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    background: var(--uno);
+    border: none;
+    border-radius: 5px;
+}
+
+.contenedorGeneralCitas {
+    background-color: var(--uno);
+    color: var(--oscuro3);
+    font-weight: bold;
+}
+
+div .campo {
+    display: block;
+    width: 100%;
+}
+
+h2 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+fieldset label {
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--acento3);
+}
+
+.formularioNone {
+    display: none;
+}
+
+.noCitas {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.noCitas div {
+    padding-top: 1%;
+    width: 80%;
+    background-color: var(--warning);
+    color: var(--oscuro3);
+    font-weight: bold;
+    font-size: 2rem;
+    box-shadow: 0px 20px 10px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+@media all and (max-width:767px) {
+    html {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedorGeneralCitas {
+        position: absolute;
+        left: 3%;
+        right: 3%;
+        max-height: 80%;
+        margin-top: 2%;
+        overflow-y: scroll;
+        box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.4);
+    }
+    hr {
+        border: solid 0.5px black;
+    }
+    .noCitas {
+        margin-top: 50%;
+        margin-bottom: 15%;
+    }
+    .contenedorCita {
+        padding-top: 2%;
+        padding-bottom: 1%;
+        padding-left: 1%;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        text-align: left;
+        border-bottom: var(--oscuro3) 2px solid;
+        border-spacing: 10px;
+    }
+    .contenedorBotones {
+        padding: 10px;
+    }
+    .contenedorCita:hover {
+        background-color: var(--tres);
+    }
+    .contenedorImg img {
+        width: 80px;
+    }
+    .contenedorInfo {
+        margin-left: 10px;
+        width: 80%;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+    }
+}
+
+@media all and (min-width:768px) {
+    main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contenedorGeneralCitas {
+        position: absolute;
+        left: 25%;
+        right: 25%;
+        max-height: 60%;
+        overflow-y: scroll;
+        box-shadow: -10px 10px 10px 0 rgba(0, 0, 0, 0.4);
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .contenedorCita {
+        padding-top: 2%;
+        padding-bottom: 1%;
+        padding-left: 1%;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        text-align: left;
+        font-size: 1.2rem;
+    }
+    .contenedorCita:hover {
+        background-color: var(--tres);
+    }
+    .contenedorInfo {
+        width: 80%;
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        text-align: left;
+    }
+    .noCitas {
+        margin-bottom: 0;
+    }
+    .noCitas div {
+        width: 20%;
+    }
+    .contenedorImg img {
+        width: 80px;
+    }
+    hr {
+        display: none;
+    }
+    .contenedorBotones {
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1105px) {
+    .contenedorGeneralCitas {
+        left: 10%;
+        right: 10%;
+        max-height: 70%;
+    }
+    .noCitas div {
+        width: 40%;
+    }
+}

@@ -1,0 +1,180 @@
+main:before {
+    background-image: url(../../general/includes/imagenes/fondo.jpg);
+}
+
+form, div {
+    z-index: 2;
+}
+
+.contenedorInicio {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 2%;
+}
+
+.contenedorEliminar {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 10px;
+}
+
+.contenedorEditar {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorEditar input {
+    width: 70%;
+}
+
+.contenedorCambiarContraseña {
+    align-self: center;
+    width: 50%;
+    margin-bottom: 5%;
+}
+
+.formularioNone {
+    display: none;
+}
+
+#botonEditar {
+    text-align: center;
+    width: 70%;
+}
+
+#botonGuardar {
+    display: none;
+}
+
+@media all and (max-width:767px) {
+    header {
+        margin: 0;
+    }
+    main {
+        flex-direction: column;
+    }
+    main:before {
+        background-position: 50% 0;
+    }
+    .contenedorInicio {
+        margin: 0;
+    }
+    fieldset {
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+        background: var(--uno);
+        border: none;
+        border-radius: 5px;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-bottom: 5%;
+    }
+    h2 {
+        font-size: 30px;
+        color: var(--oscuro2);
+    }
+    fieldset label {
+        font-weight: bold;
+        font-size: 18px;
+        color: var(--oscuro2);
+        width: 35%;
+        margin-left: 2%;
+        display: inline-block;
+        padding-top: 20px;
+        text-align: left;
+    }
+    input[type=text] {
+        width: 60%;
+        margin-right: 3%;
+        display: inline-block;
+        padding-top: 12px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 10px;
+        color: var(--oscuro1);
+        font-weight: bold;
+        font-size: 1rem;
+        outline: 0px;
+        border: 3px solid var(--oscuro2);
+        border-radius: 5px;
+    }
+    ::-webkit-input-placeholder {
+        color: var(--acento1);
+    }
+}
+
+@media all and (min-width:768px) {
+    main {
+        overflow: hidden;
+        display: flex;
+        text-align: center;
+    }
+    form {
+        width: 100%;
+        height: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    fieldset {
+        width: 35%;
+        padding-bottom: 1%;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+        background: var(--uno);
+        border: none;
+        border-radius: 5px;
+    }
+    h2 {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 32px;
+        color: var(--oscuro2);
+    }
+    .contenedorCampos {
+        margin-right: 10%;
+        margin-left: 10%;
+        text-align: left;
+    }
+    fieldset label {
+        font-weight: bold;
+        font-size: 25px;
+        color: var(--oscuro2);
+        width: 37%;
+        display: inline-block;
+        padding-top: 10px;
+    }
+    input[type=text] {
+        width: 63%;
+        display: inline-block;
+        padding-top: 12px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 10px;
+        color: var(--oscuro1);
+        font-weight: bold;
+        font-size: 1rem;
+        outline: 0px;
+        border: 3px solid var(--oscuro2);
+        border-radius: 5px;
+    }
+    ::-webkit-input-placeholder {
+        color: var(--acento1);
+    }
+    footer label {
+        font-weight: bold;
+    }
+    .contenedorCambiarContraseña {
+        margin-top: 2%;
+    }
+}
+
+@media (min-width: 1106px) and (max-width: 1326px) {
+    fieldset {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1105px) {
+    fieldset {
+        width: 80%;
+    }
+}

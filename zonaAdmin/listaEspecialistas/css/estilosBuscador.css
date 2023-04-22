@@ -1,0 +1,184 @@
+header, footer, main .contenedorInicio, main .contenedorBuscador {
+    z-index: 2;
+}
+
+main {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+main:before {
+    background-image: url(../../general/includes/imagenes/fondoCitas.webp);
+}
+
+.contenedorInicio {
+    text-align: left;
+    margin: 3%;
+    width: 15%;
+    height: 15%;
+}
+
+#buscador {
+    display: block;
+    height: 32px;
+    padding: 5px 32px;
+    font-size: 14px;
+    background-image: url(../includes/iconos/lupa.png);
+    background-size: 29px;
+    background-repeat: no-repeat;
+    background-position: 5px;
+    background-color: var(--uno);
+    color: var(--oscuro1);
+    font-weight: bold;
+    size: 1rem;
+    outline: 0px;
+    border: 3px solid var(--oscuro2);
+    border-radius: 5px;
+}
+
+.medico {
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    background: var(--uno);
+}
+
+.contenedorImagenMedico img {
+    display: block;
+    height: auto;
+}
+
+.infoMedico {
+    width: 70%;
+}
+
+form {
+    display: block;
+    align-self: center;
+    flex-direction: row-reverse;
+    width: 30%;
+}
+
+@media all and (max-width:767px) {
+    .contenedorBuscador {
+        width: 100%;
+    }
+    #buscador {
+        width: 80%;
+        margin-left: 18%;
+        margin-top: 3%;
+    }
+    .medico {
+        border-bottom: var(--oscuro3) 2px solid;
+    }
+    .medico:hover {
+        background-color: var(--acento1);
+    }
+    .medico label {
+        display: block;
+        color: var(--oscuro3);
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .infoMedico {
+        margin-left: 1.5%;
+        margin-top: 1.5%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    .contenedorImagenMedico img {
+        width: 80px;
+    }
+    #listaPrincipal, .resultado {
+        position: absolute;
+        left: 2%;
+        right: 2%;
+        max-height: 70%;
+        margin-top: 5%;
+        overflow-y: scroll;
+        box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+    }
+    .medico:focus .medico:hover {
+        background-color: var(--acento1);
+    }
+    hr {
+        border: solid 0.5px black;
+    }
+}
+
+@media all and (min-width:768px) {
+    .contenedorInicio {
+        width: 6%;
+        text-align: left;
+        margin: 0.5%;
+    }
+    .contenedorBuscador {
+        width: 100%;
+    }
+    #buscador {
+        width: 25%;
+        margin-top: 1%;
+        margin-left: 74%;
+    }
+    .medico:hover {
+        background-color: var(--acento1);
+    }
+    .medico label {
+        display: block;
+        color: var(--oscuro3);
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .infoMedico {
+        margin-left: 1%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+    }
+    .contenedorImagenMedico img {
+        width: 100px;
+    }
+    #listaPrincipal, .resultado {
+        position: absolute;
+        left: 25%;
+        right: 25%;
+        max-height: 60%;
+        margin-top: 2%;
+        overflow-y: scroll;
+        box-shadow: -10px 10px 10px 0 rgba(0, 0, 0, 0.4);
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    hr {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1105px) {
+    #listaPrincipal, .resultado {
+        left: 15%;
+        right: 15%;
+        max-height: 65%;
+    }
+    #buscador {
+        width: 35%;
+        margin-left: 65%;
+    }
+}
+
+@media (min-width: 1106px) and (max-width: 1326px) {
+    #listaPrincipal, .resultado {
+        margin-top: 4%;
+        left: 15%;
+        right: 15%;
+        max-height: 55%;
+    }
+    #buscador {
+        width: 35%;
+        margin-left: 65%;
+    }
+}
